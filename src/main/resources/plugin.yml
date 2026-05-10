@@ -1,0 +1,11 @@
+name: RideOnHead
+description: $description
+prefix: RideOnHead
+version: '${version}'
+
+main: ru.deelter.rideOnHead.RideOnHead
+api-version: '1.21.11'
+load: POSTWORLD
+
+authors: [ DeelTer ]
+website: https://deelter.ru

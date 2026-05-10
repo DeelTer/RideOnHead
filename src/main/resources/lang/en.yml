@@ -1,0 +1,34 @@
+# RideOnHead English localization
+# Test MiniMessage components at: https://webui.advntr.dev/
+
+messages:
+  # Prefix styles:
+  # Regular: <color:#FFD700>RideOnHead</color> <#C7B9A6>
+  # Error:   <color:#EA4B3C>RideOnHead</color> <#C7A6AB>
+
+  no-permission: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>You don't have permission."
+  admin-no-permission: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>You don't have admin permission."
+  toggle-enabled: "<color:#FFD700>RideOnHead</color> <#C7B9A6>Players can now ride on you."
+  toggle-disabled: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>Riding on you has been disabled."
+  toggle-admin-enabled: "<color:#FFD700>RideOnHead</color> <#C7B9A6>Forced ride ON for <player>."
+  toggle-admin-disabled: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>Forced ride OFF for <player>."
+  toggle-target-notify-enabled: "<color:#FFD700>RideOnHead</color> <#C7B9A6>An admin has enabled riding on you."
+  toggle-target-notify-disabled: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>An admin has disabled riding on you."
+  blacklist-add: "<color:#FFD700>RideOnHead</color> <#C7B9A6>Added <player> to your blacklist."
+  blacklist-remove: "<color:#FFD700>RideOnHead</color> <#C7B9A6>Removed <player> from your blacklist."
+  blacklist-admin-add: "<color:#FFD700>RideOnHead</color> <#C7B9A6>Added <target> to blacklist of <owner>."
+  blacklist-admin-remove: "<color:#FFD700>RideOnHead</color> <#C7B9A6>Removed <target> from blacklist of <owner>."
+  blacklist-admin-notify-add: "<color:#FFD700>RideOnHead</color> <#C7B9A6>An admin added <player> to your blacklist."
+  blacklist-admin-notify-remove: "<color:#FFD700>RideOnHead</color> <#C7B9A6>An admin removed <player> from your blacklist."
+  blacklist-list-header: "<color:#FFD700>RideOnHead</color> <#C7B9A6>Your blacklist:"
+  blacklist-list-empty: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>Empty."
+  blacklist-list-entry: "<color:#FFD700>RideOnHead</color> <#C7B9A6>- <player>"
+  cannot-ride: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>You cannot ride this player."
+  rider-ejected: "<color:#FFD700>RideOnHead</color> <#C7B9A6>Your passenger was ejected."
+  target-toggle-disabled: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>That player has riding disabled."
+  target-blacklisted: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>You are in that player's blacklist."
+  target-has-passengers: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>That player already has a passenger."
+  already-in-stack: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>You are already in the ride stack."
+  help-message: "<color:#FFD700>RideOnHead</color> <#C7B9A6>/ride toggle - switch ride permission on/off<newline><color:#FFD700>RideOnHead</color> <#C7B9A6>/ride blacklist [player] - toggle blacklist entry<newline><color:#FFD700>RideOnHead</color> <#C7B9A6>/ride toggle <player> (admin) - force toggle for player<newline><color:#FFD700>RideOnHead</color> <#C7B9A6>/ride blacklist <owner> <target> (admin) - manage someone else's blacklist<newline><color:#FFD700>RideOnHead</color> <#C7B9A6>/ride reload (admin) - reload configuration"
+  player-not-found: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>Player not found."
+  reload-success: "<color:#FFD700>RideOnHead</color> <#C7B9A6>Configuration reloaded successfully."
