@@ -2,6 +2,7 @@ package ru.deelter.rideonhead.storage;
 
 import com.github.benmanes.caffeine.cache.Cache;
 import com.github.benmanes.caffeine.cache.Caffeine;
+import org.jspecify.annotations.NonNull;
 import ru.deelter.rideonhead.RideOnHead;
 
 import java.sql.*;
@@ -56,7 +57,7 @@ public class H2DataStorage implements DataStorage {
 	}
 
 	@Override
-	public void setToggle(UUID uuid, boolean enabled) {
+	public void setToggle(@NonNull UUID uuid, boolean enabled) {
 		try (PreparedStatement ps = connection.prepareStatement(
 				"MERGE INTO player_settings KEY(uuid) VALUES (?, ?)")) {
 			ps.setString(1, uuid.toString());
@@ -87,7 +88,7 @@ public class H2DataStorage implements DataStorage {
 	}
 
 	@Override
-	public void addToBlacklist(UUID target, UUID banned) {
+	public void addToBlacklist(@NonNull UUID target, @NonNull UUID banned) {
 		try (PreparedStatement ps = connection.prepareStatement(
 				"MERGE INTO player_blacklist KEY(target, banned) VALUES (?, ?)")) {
 			ps.setString(1, target.toString());
@@ -100,7 +101,7 @@ public class H2DataStorage implements DataStorage {
 	}
 
 	@Override
-	public void removeFromBlacklist(UUID target, UUID banned) {
+	public void removeFromBlacklist(@NonNull UUID target, @NonNull UUID banned) {
 		try (PreparedStatement ps = connection.prepareStatement(
 				"DELETE FROM player_blacklist WHERE target = ? AND banned = ?")) {
 			ps.setString(1, target.toString());
