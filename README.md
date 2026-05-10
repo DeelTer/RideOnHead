@@ -43,7 +43,5 @@
 ## 🔧 Configuration
 Detailed comments inside `config.yml` will guide you through all settings, including storage, sounds, language, and stack-climb behaviour.
 
-## 👀 Preview
-![Preview](https://i.imgur.com/w6yuMNu.gif)
 ---
 **Issue tracker:** [GitHub Issues](https://github.com/DeelTer/RideOnHead/issues)  
