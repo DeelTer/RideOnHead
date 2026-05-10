@@ -1,0 +1,33 @@
+# RideOnHead German localization
+# Test MiniMessage components at: https://webui.advntr.dev/
+
+messages:
+  # Normale Nachrichten: <color:#FFD700>RideOnHead</color> <#C7B9A6>
+  # Fehler:              <color:#EA4B3C>RideOnHead</color> <#C7A6AB>
+
+  no-permission: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>Du hast keine Berechtigung."
+  admin-no-permission: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>Du hast keine Admin-Berechtigung."
+  toggle-enabled: "<color:#FFD700>RideOnHead</color> <#C7B9A6>Spieler können jetzt auf dir reiten."
+  toggle-disabled: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>Reiten auf dir wurde deaktiviert."
+  toggle-admin-enabled: "<color:#FFD700>RideOnHead</color> <#C7B9A6>Reiten für <player> erzwungen aktiviert."
+  toggle-admin-disabled: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>Reiten für <player> erzwungen deaktiviert."
+  toggle-target-notify-enabled: "<color:#FFD700>RideOnHead</color> <#C7B9A6>Ein Admin hat Reiten auf dir aktiviert."
+  toggle-target-notify-disabled: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>Ein Admin hat Reiten auf dir deaktiviert."
+  blacklist-add: "<color:#FFD700>RideOnHead</color> <#C7B9A6><player> wurde zu deiner Blacklist hinzugefügt."
+  blacklist-remove: "<color:#FFD700>RideOnHead</color> <#C7B9A6><player> wurde von deiner Blacklist entfernt."
+  blacklist-admin-add: "<color:#FFD700>RideOnHead</color> <#C7B9A6><target> zur Blacklist von <owner> hinzugefügt."
+  blacklist-admin-remove: "<color:#FFD700>RideOnHead</color> <#C7B9A6><target> von der Blacklist von <owner> entfernt."
+  blacklist-admin-notify-add: "<color:#FFD700>RideOnHead</color> <#C7B9A6>Ein Admin hat <player> zu deiner Blacklist hinzugefügt."
+  blacklist-admin-notify-remove: "<color:#FFD700>RideOnHead</color> <#C7B9A6>Ein Admin hat <player> von deiner Blacklist entfernt."
+  blacklist-list-header: "<color:#FFD700>RideOnHead</color> <#C7B9A6>Deine Blacklist:"
+  blacklist-list-empty: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>Leer."
+  blacklist-list-entry: "<color:#FFD700>RideOnHead</color> <#C7B9A6>- <player>"
+  cannot-ride: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>Du kannst nicht auf diesem Spieler reiten."
+  rider-ejected: "<color:#FFD700>RideOnHead</color> <#C7B9A6>Dein Passagier wurde abgeworfen."
+  target-toggle-disabled: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>Dieser Spieler hat Reiten deaktiviert."
+  target-blacklisted: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>Du bist auf der Blacklist dieses Spielers."
+  target-has-passengers: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>Dieser Spieler hat bereits einen Passagier."
+  already-in-stack: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>Du bist bereits im Stapel."
+  help-message: "<color:#FFD700>RideOnHead</color> <#C7B9A6>/ride toggle - Reiten erlauben/verbieten<newline><color:#FFD700>RideOnHead</color> <#C7B9A6>/ride blacklist [Spieler] - Blacklist-Eintrag umschalten<newline><color:#FFD700>RideOnHead</color> <#C7B9A6>/ride toggle <Spieler> (Admin) - Erzwingen für Spieler<newline><color:#FFD700>RideOnHead</color> <#C7B9A6>/ride blacklist <Besitzer> <Ziel> (Admin) - Fremde Blacklist verwalten<newline><color:#FFD700>RideOnHead</color> <#C7B9A6>/ride reload (Admin) - Konfiguration neu laden"
+  player-not-found: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>Spieler <player> nicht gefunden."
+  reload-success: "<color:#FFD700>RideOnHead</color> <#C7B9A6>Konfiguration erfolgreich neu geladen."

@@ -1,0 +1,33 @@
+# RideOnHead Ukrainian localization
+# Test MiniMessage components at: https://webui.advntr.dev/
+
+messages:
+  # Звичайні повідомлення: <color:#FFD700>RideOnHead</color> <#C7B9A6>
+  # Помилки:               <color:#EA4B3C>RideOnHead</color> <#C7A6AB>
+
+  no-permission: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>У вас немає прав."
+  admin-no-permission: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>У вас немає прав адміністратора."
+  toggle-enabled: "<color:#FFD700>RideOnHead</color> <#C7B9A6>Тепер на вас можна сідати."
+  toggle-disabled: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>Посадку на вас заборонено."
+  toggle-admin-enabled: "<color:#FFD700>RideOnHead</color> <#C7B9A6>Примусово увімкнено посадку для <player>."
+  toggle-admin-disabled: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>Примусово вимкнено посадку для <player>."
+  toggle-target-notify-enabled: "<color:#FFD700>RideOnHead</color> <#C7B9A6>Адміністратор увімкнув вам можливість посадки."
+  toggle-target-notify-disabled: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>Адміністратор вимкнув вам можливість посадки."
+  blacklist-add: "<color:#FFD700>RideOnHead</color> <#C7B9A6>Гравця <player> додано до чорного списку."
+  blacklist-remove: "<color:#FFD700>RideOnHead</color> <#C7B9A6>Гравця <player> видалено з чорного списку."
+  blacklist-admin-add: "<color:#FFD700>RideOnHead</color> <#C7B9A6>Додано <target> до чорного списку гравця <owner>."
+  blacklist-admin-remove: "<color:#FFD700>RideOnHead</color> <#C7B9A6>Видалено <target> з чорного списку гравця <owner>."
+  blacklist-admin-notify-add: "<color:#FFD700>RideOnHead</color> <#C7B9A6>Адміністратор додав <player> до вашого чорного списку."
+  blacklist-admin-notify-remove: "<color:#FFD700>RideOnHead</color> <#C7B9A6>Адміністратор видалив <player> з вашого чорного списку."
+  blacklist-list-header: "<color:#FFD700>RideOnHead</color> <#C7B9A6>Ваш чорний список:"
+  blacklist-list-empty: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>Порожньо."
+  blacklist-list-entry: "<color:#FFD700>RideOnHead</color> <#C7B9A6>- <player>"
+  cannot-ride: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>Ви не можете сісти на цього гравця."
+  rider-ejected: "<color:#FFD700>RideOnHead</color> <#C7B9A6>Ви скинули пасажира."
+  target-toggle-disabled: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>На цього гравця не можна сідати."
+  target-blacklisted: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>Ви в чорному списку цього гравця."
+  target-has-passengers: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>У цього гравця вже є пасажир."
+  already-in-stack: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>Ви вже знаходитесь у ланцюжку."
+  help-message: "<color:#FFD700>RideOnHead</color> <#C7B9A6>/ride toggle - перемкнути дозвіл посадки<newline><color:#FFD700>RideOnHead</color> <#C7B9A6>/ride blacklist [гравець] - додати/видалити з ЧС<newline><color:#FFD700>RideOnHead</color> <#C7B9A6>/ride toggle <гравець> (адмін) - примусово перемкнути<newline><color:#FFD700>RideOnHead</color> <#C7B9A6>/ride blacklist <власник> <ціль> (адмін) - керування чужим ЧС<newline><color:#FFD700>RideOnHead</color> <#C7B9A6>/ride reload (адмін) - перезавантажити конфігурацію"
+  player-not-found: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>Гравця <player> не знайдено."
+  reload-success: "<color:#FFD700>RideOnHead</color> <#C7B9A6>Конфігурацію успішно перезавантажено."

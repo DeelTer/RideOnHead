@@ -4,6 +4,7 @@
 messages:
   # Обычные сообщения: <color:#FFD700>RideOnHead</color> <#C7B9A6>
   # Ошибки:            <color:#EA4B3C>RideOnHead</color> <#C7A6AB>
+  # Поле можно оставить пустым ("") чтобы оно не отправлялось
 
   no-permission: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>У вас нет прав."
   admin-no-permission: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>У вас нет прав администратора."
@@ -24,10 +25,10 @@ messages:
   blacklist-list-entry: "<color:#FFD700>RideOnHead</color> <#C7B9A6>- <player>"
   cannot-ride: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>Вы не можете сесть на этого игрока."
   rider-ejected: "<color:#FFD700>RideOnHead</color> <#C7B9A6>Вы сбросили пассажира."
-  target-toggle-disabled: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>Этому игроку запрещено садиться на себя."
+  target-toggle-disabled: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>На этого игрока нельзя садиться."
   target-blacklisted: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>Вы в чёрном списке этого игрока."
   target-has-passengers: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>У этого игрока уже есть пассажир."
   already-in-stack: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>Вы уже находитесь в цепочке."
   help-message: "<color:#FFD700>RideOnHead</color> <#C7B9A6>/ride toggle - переключить разрешение посадки<newline><color:#FFD700>RideOnHead</color> <#C7B9A6>/ride blacklist [игрок] - добавить/удалить из ЧС<newline><color:#FFD700>RideOnHead</color> <#C7B9A6>/ride toggle <игрок> (админ) - принудительно переключить<newline><color:#FFD700>RideOnHead</color> <#C7B9A6>/ride blacklist <владелец> <цель> (админ) - управление чужим ЧС<newline><color:#FFD700>RideOnHead</color> <#C7B9A6>/ride reload (админ) - перезагрузить конфигурацию"
-  player-not-found: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>Игрок не найден."
+  player-not-found: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>Игрок <player> не найден."
   reload-success: "<color:#FFD700>RideOnHead</color> <#C7B9A6>Конфигурация успешно перезагружена."

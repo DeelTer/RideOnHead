@@ -1,0 +1,33 @@
+# RideOnHead Chinese Simplified localization
+# Test MiniMessage components at: https://webui.advntr.dev/
+
+messages:
+  # 普通消息: <color:#FFD700>RideOnHead</color> <#C7B9A6>
+  # 错误消息: <color:#EA4B3C>RideOnHead</color> <#C7A6AB>
+
+  no-permission: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>你没有权限。"
+  admin-no-permission: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>你没有管理员权限。"
+  toggle-enabled: "<color:#FFD700>RideOnHead</color> <#C7B9A6>玩家现在可以骑在你头上了。"
+  toggle-disabled: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>骑乘已被禁用。"
+  toggle-admin-enabled: "<color:#FFD700>RideOnHead</color> <#C7B9A6>已强制为 <player> 启用骑乘。"
+  toggle-admin-disabled: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>已强制为 <player> 禁用骑乘。"
+  toggle-target-notify-enabled: "<color:#FFD700>RideOnHead</color> <#C7B9A6>管理员已启用对你的骑乘。"
+  toggle-target-notify-disabled: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>管理员已禁用对你的骑乘。"
+  blacklist-add: "<color:#FFD700>RideOnHead</color> <#C7B9A6>已将 <player> 添加到黑名单。"
+  blacklist-remove: "<color:#FFD700>RideOnHead</color> <#C7B9A6>已将 <player> 从黑名单中移除。"
+  blacklist-admin-add: "<color:#FFD700>RideOnHead</color> <#C7B9A6>已将 <target> 添加到 <owner> 的黑名单。"
+  blacklist-admin-remove: "<color:#FFD700>RideOnHead</color> <#C7B9A6>已将 <target> 从 <owner> 的黑名单中移除。"
+  blacklist-admin-notify-add: "<color:#FFD700>RideOnHead</color> <#C7B9A6>管理员已将 <player> 添加到你的黑名单。"
+  blacklist-admin-notify-remove: "<color:#FFD700>RideOnHead</color> <#C7B9A6>管理员已将 <player> 从你的黑名单中移除。"
+  blacklist-list-header: "<color:#FFD700>RideOnHead</color> <#C7B9A6>你的黑名单:"
+  blacklist-list-empty: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>空。"
+  blacklist-list-entry: "<color:#FFD700>RideOnHead</color> <#C7B9A6>- <player>"
+  cannot-ride: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>你不能骑这个玩家。"
+  rider-ejected: "<color:#FFD700>RideOnHead</color> <#C7B9A6>你的乘客已被甩下。"
+  target-toggle-disabled: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>该玩家已禁用骑乘。"
+  target-blacklisted: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>你在该玩家的黑名单中。"
+  target-has-passengers: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>该玩家已有乘客。"
+  already-in-stack: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>你已在骑乘堆叠中。"
+  help-message: "<color:#FFD700>RideOnHead</color> <#C7B9A6>/ride toggle - 切换骑乘权限<newline><color:#FFD700>RideOnHead</color> <#C7B9A6>/ride blacklist [玩家] - 切换黑名单条目<newline><color:#FFD700>RideOnHead</color> <#C7B9A6>/ride toggle <玩家> (管理员) - 强制切换玩家<newline><color:#FFD700>RideOnHead</color> <#C7B9A6>/ride blacklist <所有者> <目标> (管理员) - 管理他人的黑名单<newline><color:#FFD700>RideOnHead</color> <#C7B9A6>/ride reload (管理员) - 重新加载配置"
+  player-not-found: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>未找到玩家 <player>。"
+  reload-success: "<color:#FFD700>RideOnHead</color> <#C7B9A6>配置已成功重新加载。"

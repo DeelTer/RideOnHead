@@ -1,11 +1,24 @@
 name: RideOnHead
 description: $description
 prefix: RideOnHead
-version: '${version}'
 
-main: ru.deelter.rideOnHead.RideOnHead
-api-version: '1.21.11'
-load: POSTWORLD
+version: '${version}'
+main: ru.deelter.rideonhead.RideOnHead
+api-version: "1.21"
 
 authors: [ DeelTer ]
 website: https://deelter.ru
+load: POSTWORLD
+
+commands:
+  ride:
+    description: Manage head-riding mechanics
+    usage: /<command> [toggle|blacklist|reload]
+    aliases: [ridehead]
+permissions:
+  rideonhead.user:
+    description: Allows usage of basic ride commands
+    default: true
+  rideonhead.admin:
+    description: Allows administrative ride commands
+    default: op

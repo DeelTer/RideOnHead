@@ -1,0 +1,33 @@
+# RideOnHead French localization
+# Test MiniMessage components at: https://webui.advntr.dev/
+
+messages:
+  # Messages normaux: <color:#FFD700>RideOnHead</color> <#C7B9A6>
+  # Erreurs:           <color:#EA4B3C>RideOnHead</color> <#C7A6AB>
+
+  no-permission: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>Vous n'avez pas la permission."
+  admin-no-permission: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>Vous n'avez pas la permission admin."
+  toggle-enabled: "<color:#FFD700>RideOnHead</color> <#C7B9A6>Les joueurs peuvent maintenant monter sur vous."
+  toggle-disabled: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>Monter sur vous a été désactivé."
+  toggle-admin-enabled: "<color:#FFD700>RideOnHead</color> <#C7B9A6>Montée forcée activée pour <player>."
+  toggle-admin-disabled: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>Montée forcée désactivée pour <player>."
+  toggle-target-notify-enabled: "<color:#FFD700>RideOnHead</color> <#C7B9A6>Un admin a activé la montée sur vous."
+  toggle-target-notify-disabled: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>Un admin a désactivé la montée sur vous."
+  blacklist-add: "<color:#FFD700>RideOnHead</color> <#C7B9A6><player> ajouté à votre liste noire."
+  blacklist-remove: "<color:#FFD700>RideOnHead</color> <#C7B9A6><player> retiré de votre liste noire."
+  blacklist-admin-add: "<color:#FFD700>RideOnHead</color> <#C7B9A6><target> ajouté à la liste noire de <owner>."
+  blacklist-admin-remove: "<color:#FFD700>RideOnHead</color> <#C7B9A6><target> retiré de la liste noire de <owner>."
+  blacklist-admin-notify-add: "<color:#FFD700>RideOnHead</color> <#C7B9A6>Un admin a ajouté <player> à votre liste noire."
+  blacklist-admin-notify-remove: "<color:#FFD700>RideOnHead</color> <#C7B9A6>Un admin a retiré <player> de votre liste noire."
+  blacklist-list-header: "<color:#FFD700>RideOnHead</color> <#C7B9A6>Votre liste noire:"
+  blacklist-list-empty: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>Vide."
+  blacklist-list-entry: "<color:#FFD700>RideOnHead</color> <#C7B9A6>- <player>"
+  cannot-ride: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>Vous ne pouvez pas monter sur ce joueur."
+  rider-ejected: "<color:#FFD700>RideOnHead</color> <#C7B9A6>Votre passager a été éjecté."
+  target-toggle-disabled: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>Ce joueur a désactivé la montée."
+  target-blacklisted: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>Vous êtes dans la liste noire de ce joueur."
+  target-has-passengers: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>Ce joueur a déjà un passager."
+  already-in-stack: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>Vous êtes déjà dans la pile."
+  help-message: "<color:#FFD700>RideOnHead</color> <#C7B9A6>/ride toggle - activer/désactiver la montée<newline><color:#FFD700>RideOnHead</color> <#C7B9A6>/ride blacklist [joueur] - ajouter/retirer de la liste noire<newline><color:#FFD700>RideOnHead</color> <#C7B9A6>/ride toggle <joueur> (admin) - forcer pour un joueur<newline><color:#FFD700>RideOnHead</color> <#C7B9A6>/ride blacklist <propriétaire> <cible> (admin) - gérer la liste noire d'autrui<newline><color:#FFD700>RideOnHead</color> <#C7B9A6>/ride reload (admin) - recharger la configuration"
+  player-not-found: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>Joueur <player> introuvable."
+  reload-success: "<color:#FFD700>RideOnHead</color> <#C7B9A6>Configuration rechargée avec succès."

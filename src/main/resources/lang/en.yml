@@ -30,5 +30,5 @@ messages:
   target-has-passengers: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>That player already has a passenger."
   already-in-stack: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>You are already in the ride stack."
   help-message: "<color:#FFD700>RideOnHead</color> <#C7B9A6>/ride toggle - switch ride permission on/off<newline><color:#FFD700>RideOnHead</color> <#C7B9A6>/ride blacklist [player] - toggle blacklist entry<newline><color:#FFD700>RideOnHead</color> <#C7B9A6>/ride toggle <player> (admin) - force toggle for player<newline><color:#FFD700>RideOnHead</color> <#C7B9A6>/ride blacklist <owner> <target> (admin) - manage someone else's blacklist<newline><color:#FFD700>RideOnHead</color> <#C7B9A6>/ride reload (admin) - reload configuration"
-  player-not-found: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>Player not found."
+  player-not-found: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>Player <player> not found."
   reload-success: "<color:#FFD700>RideOnHead</color> <#C7B9A6>Configuration reloaded successfully."

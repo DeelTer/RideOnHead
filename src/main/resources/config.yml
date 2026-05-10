@@ -1,0 +1,66 @@
+# =================================================================
+#  RideOnHead Configuration
+# =================================================================
+#  Manage head-riding mechanics with toggle, blacklist and stack-climb.
+#
+#  Permissions:
+#    rideonhead.user  - Allows usage of /ride toggle and /ride blacklist
+#                        (default: true for all players)
+#    rideonhead.admin - Administrative access:
+#                        - /ride toggle <player>
+#                        - /ride blacklist <owner> <target>
+#                        - /ride reload
+#                        (default: op only)
+#
+#  Commands:
+#    /ride toggle              - Toggle whether players can ride on you
+#    /ride blacklist           - View your personal blacklist
+#    /ride blacklist <player>  - Add/remove a player from your blacklist
+#    /ride toggle <player>     - (admin) Force toggle for another player
+#    /ride blacklist <owner> <target> - (admin) Manage someone else's blacklist
+#    /ride reload              - (admin) Reload config and language files
+#
+#  Mechanics:
+#    - Right-click a player with empty hand to ride on their head
+#    - The carrier can press Shift (sneak) to eject all passengers
+#    - Players can disable riding on themselves with /ride toggle
+#    - Players can blacklist others to prevent them from riding
+#    - stack-climb controls multi-level stack behaviour
+# =================================================================
+
+# Storage provider for player settings and blacklists.
+# Available types: NBT, YML, H2
+storage:
+  type: NBT
+  h2:
+    file: plugins/RideOnHead/data.db
+  yml:
+    file: plugins/RideOnHead/data.yml
+
+# Whether riding on a player is allowed by default.
+# Players can toggle this for themselves with /ride toggle.
+toggle-default: true
+
+# If true, right-clicking any player in a ride stack will seat you
+# on the topmost passenger. If false, you can only ride a player that
+# currently has no passengers.
+stack-climb: false
+
+# Language settings
+language:
+  #
+  # Language files support MiniMessage formatting. Test at: https://webui.advntr.dev/
+  # To disable a specific message, leave its value empty (e.g., rider-ejected: "").
+  # The plugin will silently skip empty messages instead of sending them.
+  #
+  # Default language file to use (e.g., "en", "ru").
+  # Files are located in plugins/RideOnHead/lang/
+  default: "en"
+  # If true, the plugin will try to use the player's client language.
+  auto-detect: true
+
+# Sound effects (optional). Leave empty or "none" to disable.
+# Available sounds: https://minecraft.wiki/w/Sounds.json
+sounds:
+  mount: "entity.horse.saddle"
+  dismount: "entity.horse.jump"
