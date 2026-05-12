@@ -1,6 +1,6 @@
 import java.io.FileInputStream
 import java.io.FileOutputStream
-import java.util.Properties
+import java.util.*
 
 plugins {
     java
@@ -73,6 +73,7 @@ dependencies {
 
     implementation("com.h2database:h2:2.3.232")
     implementation("com.github.ben-manes.caffeine:caffeine:3.1.8")
+    implementation("org.bstats:bstats-bukkit:3.2.1")
 }
 
 tasks.withType<JavaCompile> {
@@ -88,6 +89,11 @@ tasks.processResources {
     }
 }
 tasks.shadowJar {
+    configurations = project.configurations.runtimeClasspath.map { setOf(it) }
+    dependencies {
+        exclude { it.moduleGroup != "org.bstats" }
+    }
+    relocate("org.bstats", project.group.toString())
     relocate("com.github.benmanes.caffeine", "ru.deelter.rideonhead.libs.caffeine")
     relocate("org.h2", "ru.deelter.rideonhead.libs.h2")
 

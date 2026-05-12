@@ -9,6 +9,7 @@ import ru.deelter.rideonhead.command.RideTabCompleter;
 import ru.deelter.rideonhead.config.Config;
 import ru.deelter.rideonhead.config.Lang;
 import ru.deelter.rideonhead.listener.RideListener;
+import ru.deelter.rideonhead.metrics.MetricsHandler;
 import ru.deelter.rideonhead.storage.DataStorage;
 import ru.deelter.rideonhead.storage.H2DataStorage;
 import ru.deelter.rideonhead.storage.NBTDataStorage;
@@ -37,6 +38,16 @@ public final class RideOnHead extends JavaPlugin {
 
 		getServer().getPluginManager().registerEvents(new RideListener(this), this);
 		getLogger().info("RideOnHead enabled. Storage: " + rideConfig.getStorageType());
+
+
+		initMetrics();
+	}
+
+	private void initMetrics() {
+		if (!getConfig().getBoolean("metrics.enabled", true)) return;
+
+		MetricsHandler metrics = new MetricsHandler(this);
+		metrics.setupCharts();
 	}
 
 	private @NonNull DataStorage initStorage() {

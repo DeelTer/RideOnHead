@@ -64,3 +64,8 @@ language:
 sounds:
   mount: "entity.horse.saddle"
   dismount: "entity.horse.jump"
+
+metrics:
+  # Send anonymous usage statistics to bstats.org
+  # Disable if you prefer not to share data
+  enabled: true
