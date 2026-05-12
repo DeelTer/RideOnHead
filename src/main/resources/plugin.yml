@@ -1,8 +1,8 @@
 name: RideOnHead
-description: $description
+description: A lightweight plugin that lets players sit on each other's heads
 prefix: RideOnHead
 
-version: '${version}'
+version: "1.1.0"
 main: ru.deelter.rideonhead.RideOnHead
 api-version: "1.21"
 
