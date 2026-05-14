@@ -33,16 +33,16 @@ public class RideListener implements Listener {
 		if (!rider.getPassengers().isEmpty() || rider.getVehicle() != null) return;
 
 		if (!rider.hasPermission("rideonhead.user")) {
-			sendMsg(rider, "no-permission");
+			sendMessage(rider, "no-permission");
 			return;
 		}
 
 		if (!plugin.getStorage().getToggle(target.getUniqueId())) {
-			sendMsg(rider, "target-toggle-disabled");
+			sendMessage(rider, "target-toggle-disabled");
 			return;
 		}
 		if (plugin.getStorage().isBlacklisted(target.getUniqueId(), rider.getUniqueId())) {
-			sendMsg(rider, "target-blacklisted");
+			sendMessage(rider, "target-blacklisted");
 			return;
 		}
 
@@ -50,12 +50,12 @@ public class RideListener implements Listener {
 		if (plugin.getRideConfig().isStackClimb()) {
 			mountTarget = findTopPassenger(target);
 			if (mountTarget == rider) {
-				sendMsg(rider, "already-in-stack");
+				sendMessage(rider, "already-in-stack");
 				return;
 			}
 		} else {
 			if (!target.getPassengers().isEmpty()) {
-				sendMsg(rider, "target-has-passengers");
+				sendMessage(rider, "target-has-passengers");
 				return;
 			}
 			mountTarget = target;
@@ -68,16 +68,22 @@ public class RideListener implements Listener {
 	@EventHandler
 	public void onSneak(@NonNull PlayerToggleSneakEvent event) {
 		if (!event.isSneaking()) return;
-		Player carrier = event.getPlayer();
-		if (carrier.getPassengers().isEmpty()) return;
 
-		carrier.getPassengers().forEach(p -> {
-			if (p instanceof Player) {
-				carrier.removePassenger(p);
+		Player carrier = event.getPlayer();
+		List<Entity> passengers = carrier.getPassengers();
+		if (passengers.isEmpty()) return;
+
+		boolean removedAny = false;
+		for (Entity passenger : passengers) {
+			if (passenger instanceof Player) {
+				carrier.removePassenger(passenger);
+				removedAny = true;
 			}
-		});
-		sendMsg(carrier, "rider-ejected");
-		playSound(carrier, plugin.getRideConfig().getDismountSound());
+		}
+		if (removedAny) {
+			sendMessage(carrier, "rider-ejected");
+			playSound(carrier, plugin.getRideConfig().getDismountSound());
+		}
 	}
 
 	private Player findTopPassenger(Entity start) {
@@ -101,7 +107,7 @@ public class RideListener implements Listener {
 		player.playSound(sound);
 	}
 
-	private void sendMsg(Player player, String key) {
+	private void sendMessage(Player player, String key) {
 		Component msg = plugin.getLang().getMessage(key, player);
 		if (msg != null) {
 			player.sendMessage(msg);
