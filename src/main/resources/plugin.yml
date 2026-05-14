@@ -2,7 +2,7 @@ name: RideOnHead
 description: A lightweight plugin that lets players sit on each other's heads
 prefix: RideOnHead
 
-version: "1.1.0"
+version: "1.1.1"
 main: ru.deelter.rideonhead.RideOnHead
 api-version: "1.21"
 

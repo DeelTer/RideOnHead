@@ -5,6 +5,7 @@ import com.github.benmanes.caffeine.cache.Caffeine;
 import org.jspecify.annotations.NonNull;
 import ru.deelter.rideonhead.RideOnHead;
 
+import java.io.File;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -17,15 +18,18 @@ public class H2DataStorage implements DataStorage {
 	private final Connection connection;
 
 	private final Cache<UUID, Boolean> toggleCache = Caffeine.newBuilder()
-			.expireAfterWrite(10, TimeUnit.MINUTES).build();
+			.expireAfterWrite(1, TimeUnit.HOURS).build();
 	private final Cache<UUID, List<UUID>> blacklistCache = Caffeine.newBuilder()
-			.expireAfterWrite(10, TimeUnit.MINUTES).build();
+			.expireAfterWrite(30, TimeUnit.MINUTES).build();
 
 	public H2DataStorage(RideOnHead plugin) {
 		this.plugin = plugin;
 		try {
 			Class.forName("org.h2.Driver");
-			connection = DriverManager.getConnection("jdbc:h2:file:" + plugin.getRideConfig().getH2File());
+			String h2File = plugin.getRideConfig().getH2File();
+			File dbFile = new File(h2File);
+			String url = "jdbc:h2:file:" + dbFile.getAbsolutePath();
+			connection = DriverManager.getConnection(url);
 			initTables();
 		} catch (Exception e) {
 			throw new RuntimeException("Failed to initialize H2 database", e);

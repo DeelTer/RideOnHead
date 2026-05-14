@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "ru.deelter"
-version = "1.1.0"
+version = "1.1.1"
 
 java {
     toolchain {
@@ -45,13 +45,6 @@ tasks.processResources {
 tasks.shadowJar {
     relocate("org.bstats", "ru.deelter.rideonhead.libs.bstats")
     relocate("com.github.benmanes.caffeine", "ru.deelter.rideonhead.libs.caffeine")
-    relocate("org.h2", "ru.deelter.rideonhead.libs.h2")
-
-    minimize {
-        exclude(dependency("com.h2database:h2:.*"))
-        exclude(dependency("com.github.ben-manes.caffeine:caffeine:.*"))
-        exclude(dependency("org.bstats:bstats-bukkit:.*"))
-    }
 
     archiveClassifier = ""
 }
