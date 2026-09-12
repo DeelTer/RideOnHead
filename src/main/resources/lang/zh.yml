@@ -27,6 +27,8 @@ messages:
   target-toggle-disabled: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>该玩家已禁用骑乘。"
   target-blacklisted: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>你在该玩家的黑名单中。"
   target-has-passengers: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>该玩家已有乘客。"
+  # Disabled by default. Example: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>...".
+  target-no-saddle: ""
   already-in-stack: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>你已在骑乘堆叠中。"
   help-message: "<color:#FFD700>RideOnHead</color> <#C7B9A6>/ride toggle - 切换骑乘权限<newline><color:#FFD700>RideOnHead</color> <#C7B9A6>/ride blacklist [玩家] - 切换黑名单条目<newline><color:#FFD700>RideOnHead</color> <#C7B9A6>/ride toggle <玩家> (管理员) - 强制切换玩家<newline><color:#FFD700>RideOnHead</color> <#C7B9A6>/ride blacklist <所有者> <目标> (管理员) - 管理他人的黑名单<newline><color:#FFD700>RideOnHead</color> <#C7B9A6>/ride reload (管理员) - 重新加载配置"
   player-not-found: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>未找到玩家 <player>。"

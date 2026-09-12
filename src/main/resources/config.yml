@@ -26,6 +26,7 @@
 #    - Players can disable riding on themselves with /ride toggle
 #    - Players can blacklist others to prevent them from riding
 #    - stack-climb controls multi-level stack behaviour
+#    - saddle.require limits riding to players wearing a saddle helmet
 # =================================================================
 
 # Storage provider for player settings and blacklists.
@@ -45,6 +46,16 @@ toggle-default: true
 # on the topmost passenger. If false, you can only ride a player that
 # currently has no passengers.
 stack-climb: false
+
+# Saddle requirement.
+# If require is true, you can only ride a player who wears a saddle
+# in the helmet slot.
+# allow-equip lets players put a saddle on their own head (right-click
+# with a saddle, or drag it into the helmet slot). Only used when
+# require is true.
+saddle:
+  require: false
+  allow-equip: true
 
 # Language settings
 language:

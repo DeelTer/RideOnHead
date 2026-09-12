@@ -27,6 +27,8 @@ messages:
   target-toggle-disabled: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>Ce joueur a désactivé la montée."
   target-blacklisted: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>Vous êtes dans la liste noire de ce joueur."
   target-has-passengers: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>Ce joueur a déjà un passager."
+  # Disabled by default. Example: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>...".
+  target-no-saddle: ""
   already-in-stack: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>Vous êtes déjà dans la pile."
   help-message: "<color:#FFD700>RideOnHead</color> <#C7B9A6>/ride toggle - activer/désactiver la montée<newline><color:#FFD700>RideOnHead</color> <#C7B9A6>/ride blacklist [joueur] - ajouter/retirer de la liste noire<newline><color:#FFD700>RideOnHead</color> <#C7B9A6>/ride toggle <joueur> (admin) - forcer pour un joueur<newline><color:#FFD700>RideOnHead</color> <#C7B9A6>/ride blacklist <propriétaire> <cible> (admin) - gérer la liste noire d'autrui<newline><color:#FFD700>RideOnHead</color> <#C7B9A6>/ride reload (admin) - recharger la configuration"
   player-not-found: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>Joueur <player> introuvable."

@@ -12,6 +12,8 @@ public class Config {
 	private final String h2File;
 	private final String ymlFile;
 	private final boolean stackClimb;
+	private final boolean requireSaddle;
+	private final boolean saddleEquip;
 	private final String defaultLanguage;
 	private final boolean autoDetectLanguage;
 	private final String mountSound;
@@ -24,6 +26,8 @@ public class Config {
 		this.h2File = config.getString("storage.h2.file", "plugins/RideOnHead/data.db");
 		this.ymlFile = config.getString("storage.yml.file", "plugins/RideOnHead/data.yml");
 		this.stackClimb = config.getBoolean("stack-climb", false);
+		this.requireSaddle = config.getBoolean("saddle.require", false);
+		this.saddleEquip = config.getBoolean("saddle.allow-equip", true);
 		this.defaultLanguage = config.getString("language.default", "en");
 		this.autoDetectLanguage = config.getBoolean("language.auto-detect", false);
 		this.mountSound = config.getString("sounds.mount", "");
