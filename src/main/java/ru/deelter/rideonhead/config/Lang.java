@@ -75,7 +75,7 @@ public class Lang {
 	public Component getMessage(String key, CommandSender sender, TagResolver... resolvers) {
 		Player player = sender instanceof Player ? (Player) sender : null;
 		String raw = resolveRawMessage(key, player);
-		if (raw == null || raw.isEmpty()) {
+		if (raw == null || raw.isBlank()) {
 			return null;
 		}
 		TagResolver combined = TagResolver.resolver(resolvers);
@@ -98,7 +98,7 @@ public class Lang {
 		if (defaultMessages != null && defaultMessages.containsKey(key)) {
 			return defaultMessages.get(key);
 		}
-		return key;
+		return null;
 	}
 
 	private String resolvePlayerLanguage(Player player) {

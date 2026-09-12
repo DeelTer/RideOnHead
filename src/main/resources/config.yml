@@ -47,15 +47,14 @@ toggle-default: true
 # currently has no passengers.
 stack-climb: false
 
-# Saddle requirement.
-# If require is true, you can only ride a player who wears a saddle
-# in the helmet slot.
-# allow-equip lets players put a saddle on their own head (right-click
-# with a saddle, or drag it into the helmet slot). Only used when
-# require is true.
+# Saddle options.
+#   require    - players can only be ridden while wearing a saddle in the
+#                helmet slot.
+#   allow-equip- lets players put a saddle on their own head (right-click
+#                with a saddle in hand
 saddle:
   require: false
-  allow-equip: true
+  allow-equip: false
 
 # Language settings
 language:

@@ -27,7 +27,6 @@ messages:
   target-toggle-disabled: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>Ese jugador tiene desactivada la montura."
   target-blacklisted: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>Estás en la lista negra de ese jugador."
   target-has-passengers: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>Ese jugador ya tiene un pasajero."
-  # Disabled by default. Example: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>...".
   target-no-saddle: ""
   already-in-stack: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>Ya estás en la pila."
   help-message: "<color:#FFD700>RideOnHead</color> <#C7B9A6>/ride toggle - activar/desactivar montura<newline><color:#FFD700>RideOnHead</color> <#C7B9A6>/ride blacklist [jugador] - añadir/quitar de lista negra<newline><color:#FFD700>RideOnHead</color> <#C7B9A6>/ride toggle <jugador> (admin) - forzar para jugador<newline><color:#FFD700>RideOnHead</color> <#C7B9A6>/ride blacklist <dueño> <objetivo> (admin) - gestionar lista negra ajena<newline><color:#FFD700>RideOnHead</color> <#C7B9A6>/ride reload (admin) - recargar configuración"

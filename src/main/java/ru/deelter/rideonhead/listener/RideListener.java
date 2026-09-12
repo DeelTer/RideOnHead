@@ -4,11 +4,13 @@ import net.kyori.adventure.key.Key;
 import net.kyori.adventure.sound.Sound;
 import net.kyori.adventure.text.Component;
 import org.bukkit.Material;
+import org.bukkit.event.block.Action;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
+import org.bukkit.event.inventory.InventoryType;
 import org.bukkit.event.player.PlayerInteractEntityEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.player.PlayerToggleSneakEvent;
@@ -21,8 +23,6 @@ import ru.deelter.rideonhead.RideOnHead;
 import java.util.List;
 
 public class RideListener implements Listener {
-
-	private static final int HELMET_SLOT = 39;
 
 	private final RideOnHead plugin;
 
@@ -79,38 +79,46 @@ public class RideListener implements Listener {
 
 	@EventHandler
 	public void onUseSaddleItem(@NonNull PlayerInteractEvent event) {
-		if (!isSaddleEquipEnabled()) return;
+
+		if (!plugin.getRideConfig().isSaddleEquip()) return;
 		if (event.getHand() != EquipmentSlot.HAND) return;
+		if (event.getAction() != Action.RIGHT_CLICK_AIR && event.getAction() != Action.RIGHT_CLICK_BLOCK) return;
 
 		ItemStack saddle = event.getItem();
 		if (saddle == null || saddle.getType() != Material.SADDLE) return;
 
-		equipSaddle(event.getPlayer(), saddle);
-	}
-
-	@EventHandler
-	public void onSaddleInventoryClick(@NonNull InventoryClickEvent event) {
-		if (!isSaddleEquipEnabled()) return;
-		if (!(event.getClickedInventory() instanceof PlayerInventory)) return;
-		if (event.getSlot() != HELMET_SLOT) return;
-
-		ItemStack cursor = event.getCursor();
-		if (cursor.getType() != Material.SADDLE) return;
-		if (!(event.getWhoClicked() instanceof Player player)) return;
+		Player player = event.getPlayer();
+		ItemStack helmet = player.getInventory().getHelmet();
+		if (helmet != null && helmet.getType().isAir() && !helmet.isEmpty()) return;
 
 		event.setCancelled(true);
-		equipSaddle(player, cursor);
+		equipSaddle(player, saddle);
 	}
 
-	private boolean isSaddleEquipEnabled() {
-		return plugin.getRideConfig().isRequireSaddle() && plugin.getRideConfig().isSaddleEquip();
-	}
+//	@EventHandler
+//	public void onSaddleInventoryClick(@NonNull InventoryClickEvent event) {
+//		if (!plugin.getRideConfig().isSaddleEquip()) return;
+//		if (!(event.getClickedInventory() instanceof PlayerInventory playerInventory)) return;
+//		if (event.getSlotType() != InventoryType.SlotType.ARMOR) return;
+//
+//		System.out.println(event.getSlot());
+//		System.out.println(event.getRawSlot());
+//		// 39?
+//
+//		ItemStack cursor = event.getCursor();
+//		if (cursor.getType() != Material.SADDLE) return;
+//		if (!(event.getWhoClicked() instanceof Player player)) return;
+//
+//		event.setCancelled(true);
+//		equipSaddle(player, cursor);
+//	}
 
 	private void equipSaddle(@NonNull Player player, @NonNull ItemStack saddle) {
 		PlayerInventory inventory = player.getInventory();
-		if (inventory.getHelmet() != null) return;
+		ItemStack helmet = player.getInventory().getHelmet();
+		if (helmet != null && helmet.getType().isAir() && !helmet.isEmpty()) return;
 
-		ItemStack helmet = saddle.clone();
+		helmet = saddle.clone();
 		helmet.setAmount(1);
 		inventory.setHelmet(helmet);
 		saddle.subtract();

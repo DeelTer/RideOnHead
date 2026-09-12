@@ -28,7 +28,6 @@ messages:
   target-toggle-disabled: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>На этого игрока нельзя садиться."
   target-blacklisted: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>Вы в чёрном списке этого игрока."
   target-has-passengers: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>У этого игрока уже есть пассажир."
-  # Disabled by default. Example: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>...".
   target-no-saddle: ""
   already-in-stack: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>Вы уже находитесь в цепочке."
   help-message: "<color:#FFD700>RideOnHead</color> <#C7B9A6>/ride toggle - переключить разрешение посадки<newline><color:#FFD700>RideOnHead</color> <#C7B9A6>/ride blacklist [игрок] - добавить/удалить из ЧС<newline><color:#FFD700>RideOnHead</color> <#C7B9A6>/ride toggle <игрок> (админ) - принудительно переключить<newline><color:#FFD700>RideOnHead</color> <#C7B9A6>/ride blacklist <владелец> <цель> (админ) - управление чужим ЧС<newline><color:#FFD700>RideOnHead</color> <#C7B9A6>/ride reload (админ) - перезагрузить конфигурацию"

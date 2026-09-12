@@ -27,7 +27,6 @@ messages:
   target-toggle-disabled: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>Dieser Spieler hat Reiten deaktiviert."
   target-blacklisted: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>Du bist auf der Blacklist dieses Spielers."
   target-has-passengers: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>Dieser Spieler hat bereits einen Passagier."
-  # Disabled by default. Example: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>...".
   target-no-saddle: ""
   already-in-stack: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>Du bist bereits im Stapel."
   help-message: "<color:#FFD700>RideOnHead</color> <#C7B9A6>/ride toggle - Reiten erlauben/verbieten<newline><color:#FFD700>RideOnHead</color> <#C7B9A6>/ride blacklist [Spieler] - Blacklist-Eintrag umschalten<newline><color:#FFD700>RideOnHead</color> <#C7B9A6>/ride toggle <Spieler> (Admin) - Erzwingen für Spieler<newline><color:#FFD700>RideOnHead</color> <#C7B9A6>/ride blacklist <Besitzer> <Ziel> (Admin) - Fremde Blacklist verwalten<newline><color:#FFD700>RideOnHead</color> <#C7B9A6>/ride reload (Admin) - Konfiguration neu laden"

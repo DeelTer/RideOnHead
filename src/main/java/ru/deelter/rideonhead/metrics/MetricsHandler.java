@@ -20,10 +20,7 @@ public class MetricsHandler {
 		metrics.addCustomChart(new SimplePie("toggle_default", () -> plugin.getRideConfig().isToggleDefault() ? "enabled" : "disabled"));
 		metrics.addCustomChart(new SimplePie("stack_climb", () -> plugin.getRideConfig().isStackClimb() ? "enabled" : "disabled"));
 		metrics.addCustomChart(new SimplePie("require_saddle", () -> plugin.getRideConfig().isRequireSaddle() ? "enabled" : "disabled"));
-		metrics.addCustomChart(new SimplePie("saddle_equip", () -> {
-			if (!plugin.getRideConfig().isRequireSaddle()) return "unused";
-			return plugin.getRideConfig().isSaddleEquip() ? "enabled" : "disabled";
-		}));
+		metrics.addCustomChart(new SimplePie("saddle_equip", () -> plugin.getRideConfig().isSaddleEquip() ? "enabled" : "disabled"));
 		metrics.addCustomChart(new SimplePie("auto_detect_language", () -> plugin.getRideConfig().isAutoDetectLanguage() ? "enabled" : "disabled"));
 		metrics.addCustomChart(new SimplePie("default_language", () -> plugin.getRideConfig().getDefaultLanguage()));
 

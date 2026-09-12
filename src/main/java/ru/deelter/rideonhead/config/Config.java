@@ -27,7 +27,7 @@ public class Config {
 		this.ymlFile = config.getString("storage.yml.file", "plugins/RideOnHead/data.yml");
 		this.stackClimb = config.getBoolean("stack-climb", false);
 		this.requireSaddle = config.getBoolean("saddle.require", false);
-		this.saddleEquip = config.getBoolean("saddle.allow-equip", true);
+		this.saddleEquip = config.getBoolean("saddle.allow-equip", false);
 		this.defaultLanguage = config.getString("language.default", "en");
 		this.autoDetectLanguage = config.getBoolean("language.auto-detect", false);
 		this.mountSound = config.getString("sounds.mount", "");

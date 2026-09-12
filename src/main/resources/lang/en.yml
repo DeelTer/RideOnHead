@@ -28,7 +28,6 @@ messages:
   target-toggle-disabled: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>That player has riding disabled."
   target-blacklisted: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>You are in that player's blacklist."
   target-has-passengers: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>That player already has a passenger."
-  # Disabled by default. Example: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>...".
   target-no-saddle: ""
   already-in-stack: "<color:#EA4B3C>RideOnHead</color> <#C7A6AB>You are already in the ride stack."
   help-message: "<color:#FFD700>RideOnHead</color> <#C7B9A6>/ride toggle - switch ride permission on/off<newline><color:#FFD700>RideOnHead</color> <#C7B9A6>/ride blacklist [player] - toggle blacklist entry<newline><color:#FFD700>RideOnHead</color> <#C7B9A6>/ride toggle <player> (admin) - force toggle for player<newline><color:#FFD700>RideOnHead</color> <#C7B9A6>/ride blacklist <owner> <target> (admin) - manage someone else's blacklist<newline><color:#FFD700>RideOnHead</color> <#C7B9A6>/ride reload (admin) - reload configuration"
