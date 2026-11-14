@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "ru.deelter"
-version = "1.1.3"
+version = "1.1.4"
 
 java {
     toolchain {

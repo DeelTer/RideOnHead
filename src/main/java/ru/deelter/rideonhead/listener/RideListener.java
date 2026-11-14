@@ -89,7 +89,7 @@ public class RideListener implements Listener {
 
 		Player player = event.getPlayer();
 		ItemStack helmet = player.getInventory().getHelmet();
-		if (helmet != null && helmet.getType().isAir() && !helmet.isEmpty()) return;
+		if (helmet != null && !helmet.isEmpty()) return;
 
 		event.setCancelled(true);
 		equipSaddle(player, saddle);
@@ -116,7 +116,7 @@ public class RideListener implements Listener {
 	private void equipSaddle(@NonNull Player player, @NonNull ItemStack saddle) {
 		PlayerInventory inventory = player.getInventory();
 		ItemStack helmet = player.getInventory().getHelmet();
-		if (helmet != null && helmet.getType().isAir() && !helmet.isEmpty()) return;
+		if (helmet != null && !helmet.isEmpty()) return;
 
 		helmet = saddle.clone();
 		helmet.setAmount(1);
