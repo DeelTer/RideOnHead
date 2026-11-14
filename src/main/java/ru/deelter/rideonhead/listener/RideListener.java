@@ -4,6 +4,7 @@ import net.kyori.adventure.key.Key;
 import net.kyori.adventure.sound.Sound;
 import net.kyori.adventure.text.Component;
 import org.bukkit.Material;
+import org.bukkit.enchantments.Enchantment;
 import org.bukkit.event.block.Action;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
@@ -89,7 +90,8 @@ public class RideListener implements Listener {
 
 		Player player = event.getPlayer();
 		ItemStack helmet = player.getInventory().getHelmet();
-		if (helmet != null && !helmet.isEmpty()) return;
+		if (helmet != null && helmet.getType() == Material.SADDLE) return;
+		if (helmet != null && helmet.containsEnchantment(Enchantment.BINDING_CURSE)) return;
 
 		event.setCancelled(true);
 		equipSaddle(player, saddle);
@@ -115,13 +117,23 @@ public class RideListener implements Listener {
 
 	private void equipSaddle(@NonNull Player player, @NonNull ItemStack saddle) {
 		PlayerInventory inventory = player.getInventory();
-		ItemStack helmet = player.getInventory().getHelmet();
-		if (helmet != null && !helmet.isEmpty()) return;
+		ItemStack oldHelmet = inventory.getHelmet();
+		boolean hasOldHelmet = oldHelmet != null && !oldHelmet.isEmpty();
 
-		helmet = saddle.clone();
-		helmet.setAmount(1);
-		inventory.setHelmet(helmet);
-		saddle.subtract();
+		ItemStack newHelmet = saddle.clone();
+		newHelmet.setAmount(1);
+		inventory.setHelmet(newHelmet);
+
+		if (saddle.getAmount() <= 1) {
+			// Swap: old helmet goes to the hand slot the saddle was in
+			inventory.setItemInMainHand(hasOldHelmet ? oldHelmet : null);
+		} else {
+			saddle.subtract();
+			if (hasOldHelmet) {
+				inventory.addItem(oldHelmet).values()
+						.forEach(left -> player.getWorld().dropItemNaturally(player.getLocation(), left));
+			}
+		}
 		playSound(player, plugin.getRideConfig().getMountSound());
 	}
 
